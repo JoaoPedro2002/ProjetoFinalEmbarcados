@@ -1,9 +1,17 @@
 {
-    "cor": [
-      { "r": 255, "g": 255, "b": 255 }
-    ],
-    "conectado": true,
-    "ligado": false
-
+    "estado": [
+        {
+            "cor":{
+                "r": 255,
+                "g": 255,
+                "b": 255
+            
+            },
+            "conectado": true,
+            "ligado": false
+        
+        }
+      
+    ]
 }
 
