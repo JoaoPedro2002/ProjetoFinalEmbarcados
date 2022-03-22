@@ -1,17 +1,12 @@
 {
-    "estado": [
-        {
-            "cor":{
-                "r": 255,
-                "g": 255,
-                "b": 255
-            
-            },
-            "conectado": true,
-            "ligado": false
-        
-        }
-      
-    ]
+  "estado": [
+    {
+      "ligado": false,
+      "automatico": false,
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "id": 0
+    }
+  ]
 }
-
