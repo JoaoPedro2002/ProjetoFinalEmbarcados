@@ -25,6 +25,8 @@ export default function AssetExample() {
     });
   };
 
+
+
   const changeGreen = function (value) {
     setGreen(value);
     request({
@@ -75,14 +77,15 @@ export default function AssetExample() {
     <View>
       <Text>{conectado ? '' : 'Conecte-se a um dispositivo'}</Text>
       {isSwitchOnAuto ? 'Automatico' : 'Manual'}
-      <Switch value={isSwitchOnAuto} onValueChange={automatico} />
+      <Switch value={isSwitchOnAuto} onValueChange={automatico} disabled={!conectado} />
       {isSwitchOn ? 'Ligado' : 'Desligado'}
-      <Switch value={isSwitchOn} onValueChange={ligar} />
+      <Switch value={isSwitchOn} onValueChange={ligar} disabled={!conectado}/>
       <View style={styles.square} />
       <Text> Vermelho: {Math.floor(red)} </Text>
       <Slider
         minimumValue={0}
         maximumValue={255}
+        disabled={!(isSwitchOn||isSwitchOnAuto)}
         onValueChange={(value) => {
           changeRed(value);
         }}></Slider>
@@ -90,11 +93,13 @@ export default function AssetExample() {
       <Slider
         minimumValue={0}
         maximumValue={255}
+        disabled={!(isSwitchOn||isSwitchOnAuto)}
         onValueChange={(value) => changeGreen(value)}></Slider>
       <Text> Azul: {Math.floor(blue)} </Text>
       <Slider
         minimumValue={0}
         maximumValue={255}
+        disabled={!(isSwitchOn||isSwitchOnAuto)}
         onValueChange={(value) => changeBlue(value)}></Slider>
     </View>
   );
